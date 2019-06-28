@@ -93,39 +93,41 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: 100,
               height: 100,
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    width: 50,
-                    height: 50,
-                    child: Semantics(
-                      label: "Red",
-                      child: Container(color: Colors.red),
+              child: MergeSemantics(
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      width: 50,
+                      height: 50,
+                      child: Semantics(
+                        label: "Red",
+                        child: Container(color: Colors.red),
+                      ),
                     ),
-                  ),
-                  Positioned(
-                    top: 25,
-                    left: 25,
-                    width: 50,
-                    height: 50,
-                    child: Semantics(
-                      label: "Green",
-                      child: Container(color: Colors.green),
+                    Positioned(
+                      top: 25,
+                      left: 25,
+                      width: 50,
+                      height: 50,
+                      child: Semantics(
+                        label: "Green",
+                        child: Container(color: Colors.green),
+                      ),
                     ),
-                  ),
-                  Positioned(
-                    top: 50,
-                    left: 50,
-                    width: 50,
-                    height: 50,
-                    child: Semantics(
-                      label: "Blue",
-                      child: Container(color: Colors.blue),
-                    ),
-                  )
-                ],
+                    Positioned(
+                      top: 50,
+                      left: 50,
+                      width: 50,
+                      height: 50,
+                      child: Semantics(
+                        label: "Blue",
+                        child: Container(color: Colors.blue),
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],
